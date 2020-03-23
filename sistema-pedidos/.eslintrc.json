@@ -30,6 +30,18 @@
           ".jsx"
         ]
       }
-    ]
+    ],
+    "import/no-unresolved": [
+      1,
+      {
+        "commonjs": true,
+        "amd": true
+      }
+    ],
+    "import/named": "off",
+    "import/namespace": "off",
+    "import/default": "off",
+    "import/export": "off",
+    "import/prefer-default-export": "off"
   }
 }
