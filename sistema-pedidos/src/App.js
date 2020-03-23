@@ -1,9 +1,10 @@
 import React from 'react';
+import { Routes } from './configs';
 
 function App() {
   return (
     <div>
-      <h1>ola mundo teste</h1>
+      <Routes />
     </div>
   );
 }
