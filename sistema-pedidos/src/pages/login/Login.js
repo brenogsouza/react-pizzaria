@@ -1,10 +1,13 @@
 import React from 'react';
+import { Button } from '@material-ui/core';
+import { Logo } from '../../images';
 
 // import { Container } from './styles';
 
 const Login = () => (
   <div>
-    <h1>Login</h1>
+    <img src={Logo} alt="Logo" />
+    <Button>Entrar com github</Button>
   </div>
 );
 
