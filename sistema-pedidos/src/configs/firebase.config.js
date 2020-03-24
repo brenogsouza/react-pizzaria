@@ -1,4 +1,4 @@
-export const firebaseConfig = {
+export const Config = {
   apiKey: 'AIzaSyCpRNqCnGY2VeuM5IQKe3TbfAPEH6fHQqU',
   authDomain: 'react-pizzaria-f6b66.firebaseapp.com',
   databaseURL: 'https://react-pizzaria-f6b66.firebaseio.com',
