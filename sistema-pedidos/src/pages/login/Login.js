@@ -1,10 +1,11 @@
 import React from 'react';
+import firebase from 'firebase/app';
 import { Grid } from '@material-ui/core';
 import { Logo } from '../../images';
-
 import { Container, GithubButton } from './styles';
+import { firebaseConfig } from '../../configs/firebase.config';
 
-// import { Container } from './styles';
+firebase.initializeApp(firebaseConfig);
 
 const Login = () => (
   <Container>
