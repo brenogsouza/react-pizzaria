@@ -6,6 +6,7 @@ export const Container = styled.div`
 
   img {
     width: 100%;
+    max-width: 480px
   }
 
 `;
@@ -18,5 +19,6 @@ export const GithubButton = styled(Button).attrs({
     font-size: 20px;
     padding: 15px;
     text-transform: none;
+    max-width: 480px
   }
 `;
