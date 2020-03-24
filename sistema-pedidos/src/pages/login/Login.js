@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import { Grid } from '@material-ui/core';
@@ -9,6 +9,16 @@ import { Config } from '../../configs/firebase.config';
 firebase.initializeApp(Config);
 
 const Login = () => {
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        console.log('user logado ', user);
+      } else {
+        console.log('usuario nao esta logado ');
+      }
+    });
+  }, []);
+
   const handleAuthentication = () => {
     const provider = new firebase.auth.GithubAuthProvider();
     firebase.auth().signInWithRedirect(provider);
