@@ -1,13 +1,10 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import firebase from 'firebase/app';
-import 'firebase/auth';
+
 import { Grid, Button } from '@material-ui/core';
 import { Logo } from '../../images';
 import { Container, GithubButton } from './styles';
-import { Config } from '../../configs/firebase.config';
+import firebase from '../../services/firebase';
 
-
-firebase.initializeApp(Config);
 
 const Login = () => {
   const [isUserLoggedIn, setIsUserLoggedIn] = useState(false);
