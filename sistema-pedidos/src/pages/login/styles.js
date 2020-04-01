@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Button } from '@material-ui/core';
+import { Button, makeStyles } from '@material-ui/core';
 
 export const Container = styled.div`
   padding: 50px;
@@ -22,3 +22,10 @@ export const GithubButton = styled(Button).attrs({
     max-width: 480px
   }
 `;
+
+export const useStyles = makeStyles((theme) => ({
+  backdrop: {
+    zIndex: theme.zIndex.drawer + 1,
+    color: '#fff',
+  },
+}));

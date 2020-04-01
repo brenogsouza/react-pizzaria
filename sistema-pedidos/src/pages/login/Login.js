@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import { Grid, Button } from '@material-ui/core';
 import { Logo } from '../../images';
 import { Container, GithubButton } from './styles';
 import { Config } from '../../configs/firebase.config';
+
 
 firebase.initializeApp(Config);
 
@@ -26,17 +27,17 @@ const Login = () => {
     });
   }, []);
 
-  const handleLogin = () => {
+  const handleLogin = useCallback(() => {
     const provider = new firebase.auth.GithubAuthProvider();
     firebase.auth().signInWithRedirect(provider);
-  };
+  }, []);
 
-  const handleLogout = () => {
+  const handleLogout = useCallback(() => {
     firebase.auth().signOut().then(() => {
       setIsUserLoggedIn(false);
       setIsUser(null);
     });
-  };
+  }, []);
 
 
   return (
