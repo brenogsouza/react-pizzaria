@@ -1,12 +1,15 @@
 import React from 'react';
 import { CssBaseline } from '@material-ui/core';
-import { Routes } from './configs';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
 function Root() {
   return (
     <div>
-      <Routes />
-      <CssBaseline />
+      <BrowserRouter>
+        <App />
+        <CssBaseline />
+      </BrowserRouter>
     </div>
   );
 }
