@@ -1,7 +1,7 @@
 import React from 'react';
 import { CssBaseline } from '@material-ui/core';
-import { BrowserRouter } from 'react-router-dom';
-import AuthProvider from 'store';
+import { BrowserRouter, Route } from 'react-router-dom';
+import { AuthProvider } from './store';
 import App from './App';
 
 function Root() {
@@ -9,7 +9,7 @@ function Root() {
     <div>
       <AuthProvider>
         <BrowserRouter>
-          <App />
+          <Route component={App} />
           <CssBaseline />
         </BrowserRouter>
       </AuthProvider>
