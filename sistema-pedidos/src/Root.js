@@ -1,15 +1,18 @@
 import React from 'react';
 import { CssBaseline } from '@material-ui/core';
 import { BrowserRouter } from 'react-router-dom';
+import AuthProvider from 'store';
 import App from './App';
 
 function Root() {
   return (
     <div>
-      <BrowserRouter>
-        <App />
-        <CssBaseline />
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <App />
+          <CssBaseline />
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
